@@ -9,6 +9,13 @@ public class ModelLogin implements Serializable{
 	private String login;
 	private String senha;
 	
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+	
+	public String getSenha() {
+		return senha;
+	}
 	
 	public String getLogin() {
 		return login;
@@ -18,13 +25,9 @@ public class ModelLogin implements Serializable{
 		this.login = login;
 	}
 	
-	public String getSenha() {
-		return senha;
-	}
+
 	
-	public void setSenha(String senha) {
-		this.senha = senha;
-	}
+	
 	
 	
 	
