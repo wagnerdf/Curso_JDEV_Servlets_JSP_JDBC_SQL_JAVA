@@ -42,7 +42,7 @@ public class serveletLogin extends HttpServlet {
 		
 				if (login != null && !login.isEmpty() && senha != null && !senha.isEmpty()) {
 					
-					ModelLogin modelLogin = new ModelLogin(); 
+					ModelLogin modelLogin =  new ModelLogin(); 
 					modelLogin.setLogin(login);
 					modelLogin.setSenha(senha);
 					
@@ -65,14 +65,17 @@ public class serveletLogin extends HttpServlet {
 						redirecionar.forward(request, response);
 					}
 			
-		}else {
-			RequestDispatcher redirecionar = request.getRequestDispatcher("index.jsp");
-			request.setAttribute("msg", "Informe o login e senha corretamente!");
-			redirecionar.forward(request, response);
-		}
+			}else {
+				RequestDispatcher redirecionar = request.getRequestDispatcher("index.jsp");
+				request.setAttribute("msg", "Informe o login e senha corretamente!");
+				redirecionar.forward(request, response);
+			}
 		
 		}catch (Exception e) {
 			e.printStackTrace();
+			RequestDispatcher redirecionar = request.getRequestDispatcher("erro.jsp");
+			request.setAttribute("msg", e.getMessage());
+			redirecionar.forward(request, response);
 		}
 		
 	}
