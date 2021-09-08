@@ -26,10 +26,12 @@
   } 
   .msg{
   	position: absolute;
-  	top: 70%;
+  	top: 15%;
   	left: 33%;
   	font-size: 15px;  
-  	color: red;
+  	   color: #664d03;
+  	   background-color: #fff3cd;
+  	   border-color: #ffecb5;
   } 
 </style>	
 	
@@ -43,7 +45,7 @@
 
 <input type="hidden" value="<%=request.getParameter("url")%>" name="url">
 
-	<div class="col-md-6">	
+	<div class="mb-3">	
 		<label class="form-label" for="login">Login</label>
 		<input class="form-control" id="login" name="login" type="text" required>
 		<div class="invalid-feedback">
@@ -55,7 +57,7 @@
 		
 	</div>
 	
-	<div class="col-md-6">
+	<div class="mb-3">
 		<label class="form-label" for="senha">Senha</label>
 		<input class="form-control" id="senha" name="senha" type="password" required>
 		 <div class="invalid-feedback">
