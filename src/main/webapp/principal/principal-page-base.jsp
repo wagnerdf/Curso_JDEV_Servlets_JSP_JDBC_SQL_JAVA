@@ -38,7 +38,7 @@
                                 <div class="page-wrapper">
                                     <!-- Page-body start -->
 
-										<h1>Conteudo da página do sistema</h1>
+										<h1>Conteudo página base das páginas do sistema</h1>
 
                                     <!-- Page-body end -->
                                 </div>
