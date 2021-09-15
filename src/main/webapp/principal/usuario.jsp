@@ -83,6 +83,8 @@
 										</div>
 									</div>	
 
+									<span>${msg}</span>
+
 									<!-- Page-body end -->
                                 </div>
                                 <div id="styleSelector"> </div>
