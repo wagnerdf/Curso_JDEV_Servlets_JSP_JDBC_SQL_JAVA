@@ -46,34 +46,34 @@
                                                     <div class="card-block">
                                                         <h4 class="sub-title">Cadastro de Usuário</h4>
 
-                                                        <form class="form-material" action="<%= request.getContextPath() %>/ServLetUsuarioController" method="post">
-                                                            <div class="form-group form-default">
+                                                        <form class="form-material" action="<%= request.getContextPath() %>/ServLetUsuarioController" method="post" id="formUser">
+                                                            <div class="form-group form-default form-static-label">
                                                                 <input type="text" name="id" id="id" class="form-control" readonly="readonly" value="${modolLogin.id}">
                                                                 <span class="form-bar"></span>
                                                                 <label class="float-label">ID:</label>
                                                             </div>
-                                                                <div class="form-group form-default">
-                                                                <input type="text" name="nome" id="nome" class="form-control" required="required" value="${modolLogin.nome}">
+                                                            <div class="form-group form-default">
+                                                                <input type="text" name="nome" id="nome" class="form-control inputstl" required="required" value="${modolLogin.nome}">
                                                                 <span class="form-bar"></span>
-                                                                <label class="float-label">Nome:</label>
+                                                                <label class="float-label form-floating">Nome:</label>
                                                             </div>
                                                             <div class="form-group form-default">
-                                                                <input type="email" name="email" id="email" class="form-control" required="required" autocomplete="off" value="${modolLogin.email}">
+                                                                <input type="email" name="email" id="email" class="form-control inputstl" required="required" autocomplete="off" value="${modolLogin.email}">
                                                                 <span class="form-bar"></span>
-                                                                <label class="float-label">Email:</label>
+                                                                <label class="float-label form-floating">Email:</label>
                                                             </div>
                                                             <div class="form-group form-default">
-                                                                <input type="text" name="login" id="login" class="form-control" required="required" autocomplete="off" value="${modolLogin.login}">
+                                                                <input type="text" name="login" id="login" class="form-control inputstl" required="required" autocomplete="off" value="${modolLogin.login}">
                                                                 <span class="form-bar"></span>
-                                                                <label class="float-label">login</label>
+                                                                <label class="float-label form-floating">login:</label>
                                                             </div>
                                                             <div class="form-group form-default">
-                                                                <input type="password" name="senha" id="senha" class="form-control" required="required" autocomplete="off" value="${modolLogin.senha}">
+                                                                <input type="password" name="senha" id="senha" class="form-control inputstl" required="required" autocomplete="off" value="${modolLogin.senha}">
                                                                 <span class="form-bar"></span>
-                                                                <label class="float-label">Password</label>
+                                                                <label class="float-label form-static-label">Senha:</label>
                                                             </div>
 
-                                               				<button class="btn btn-primary waves-effect waves-light">Novo</button>
+                                               				<button class="btn btn-primary waves-effect waves-light" onclick="limparForm();">Novo</button>
 												            <button class="btn btn-success waves-effect waves-light">Salvar</button>
 												            <button class="btn btn-danger waves-effect waves-light">Excluir</button>
                                                         </form>
@@ -101,6 +101,18 @@
 
 <jsp:include page="javascriptfile.jsp"></jsp:include>
 
-</body>
+<script type="text/javascript">
+function limparForm(){
+	var elementos = document.getElementById("formUser").elements;/*Retorna os elementos html dentro do form*/
+	
+	for(p = 0; p < elementos.length; p ++){
+		elementos[p].value = "";
+	}
+	
+}
 
+
+</script>
+
+</body>
 </html>
